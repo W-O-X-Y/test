@@ -1,0 +1,24 @@
+{
+    "profiles": [
+        {
+            "id": 1,
+            "name": "Ibrahim Muhammad",
+            "email": "WOXY@Outlook.com",
+            "gender": "0",
+            "address": "Riyadh, Saudi Arabia",
+            "DoB": "1992-11-16",
+            "userTag": "WOXY",
+            "photo": "../assets/cactus_2.png"
+        },
+        {
+            "id": 2,
+            "name": "Aya Muhammad",
+            "email": "Aya95@Outlook.com",
+            "gender": "1",
+            "address": "Riyadh, Saudi Arabia",
+            "DoB": "1994-03-16",
+            "userTag": "Aya",
+            "photo": "../assets/profile_picture.png"
+        }
+    ]
+}

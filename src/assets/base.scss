@@ -1,0 +1,187 @@
+
+    $zd-primary-color: rgb(255, 145, 0);
+    $zd-secondary-color: rgb(0, 207, 179);
+    $zd-secondary-color-light: rgb(0, 207, 179,0.16);
+    $zd-c-white: #ffffff;
+    $zd-c-white-soft: #f8f8f8;
+    $zd-c-white-mute: #f2f2f2;
+    $zd-soft-shadow: 0 0 1em rgba(0 0 0 / 0.16);
+    $zd-c-black: #181818;
+    $zd-c-black-soft: #222222;
+    $zd-c-black-mute: #282828;
+    $zd-c-indigo: #2c3e50;
+    $zd-c-divider-light-1: rgba(60, 60, 60, 0.29);
+    $zd-c-divider-light-2: rgba(60, 60, 60, 0.12);
+    $zd-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+    $zd-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+    $zd-c-text-light-1: $zd-c-indigo;
+    $zd-c-text-light-2: rgba(60, 60, 60, 0.66);
+    $zd-c-text-dark-1: $zd-c-white;
+    $zd-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    $zd-default-transition: all 250ms ease-in-out;
+    $zd-gradient-color: linear-gradient($zd-secondary-color-light,lighten($zd-secondary-color, 40%));
+    $color-background: $zd-c-white;
+    $color-background-soft: $zd-c-white-soft;
+    $color-background-mute: $zd-c-white-mute;
+    $color-border: $zd-c-divider-light-2;
+    $color-border-hover: $zd-c-divider-light-1;
+    $color-heading: $zd-c-text-light-1;
+    $color-text: $zd-c-text-light-1;
+    $section-gap: 160px;
+    $radius: 12px;
+    $dropShadowColor: #00634d80;
+    $doubleShadows: 0 0 0 8px $zd-secondary-color-light,
+          0 0 0 16px $zd-secondary-color-light;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+
+  &::before {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+  }
+
+  &::after {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    font-weight: normal;
+  }
+
+}
+  
+body {
+  min-height: 100vh;
+  color: $color-text;
+  background: $color-background;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: light) {
+    $color-background: $zd-c-black;
+    $color-background-soft: $zd-c-black-soft;
+    $color-background-mute: $zd-c-black-mute;
+    $color-border: $zd-c-divider-dark-2;
+    $color-border-hover: $zd-c-divider-dark-1;
+    $color-heading: $zd-c-text-dark-1;
+    $color-text: $zd-c-text-dark-2;
+    $zd-invalid-input:rgb(255, 0, 76);
+}
+
+.flex-column{
+      display: flex;
+      flex-direction: column;
+}
+
+
+.card {
+      @extend .flex-column;
+    border-radius: $radius;
+    padding: 1em;
+  
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.25s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+.input-wrapper {
+  border-radius: 2px;
+  background: $zd-secondary-color-light;
+  height: 4em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 10px;
+  margin-bottom: 1em;
+  border-radius: 12px;
+  transition: all 300ms ease-in-out;
+  outline: 2px solid transparent;
+  color: $zd-secondary-color;
+  
+  &:focus{
+    outline:2px solid $zd-secondary-color ;
+  }
+    &::placeholder {
+      color:rgba(32, 39, 38, 0.4);
+      font-weight: 600;
+    }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          -webkit-transition-delay: 9999s;
+          transition-delay: 9999s;
+        }
+}
+.input-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: $zd-secondary-color;
+  text-transform: uppercase;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: tranparent;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $zd-secondary-color-light;
+  border-radius: 100px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $zd-secondary-color;
+  transition: all 500ms ease-in-out;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}

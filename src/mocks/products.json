@@ -1,0 +1,38 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "title": "Parodia rutilans",
+            "description": "Parodia rutilans, best known as Notocactus rutilans,is a small-growing, usually solitary, cactus species. The numerous stiff, sharp spines are varicoloured and the center is reddish-brown.",
+            "price": 352,
+            "images": [
+                {
+                    "src": "../assets/cactus_1.png"
+                },
+                {
+                    "src": "../assets/cactus_2.png"
+                },
+                {
+                    "src": "../assets/aloe_vera_1.png"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Parodia rutilans",
+            "description": "Parodia rutilans, best known as Notocactus rutilans,is a small-growing, usually solitary, cactus species. The numerous stiff, sharp spines are varicoloured and the center is reddish-brown.",
+            "price": 243,
+            "images": [
+                {
+                    "src": "../assets/cactus_1.png"
+                },
+                {
+                    "src": "../assets/cactus_2.png"
+                },
+                {
+                    "src": "../assets/aloe_vera_1.png"
+                }
+            ]
+        }
+    ]
+}
